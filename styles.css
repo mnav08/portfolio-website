@@ -1,0 +1,116 @@
+:root {
+  /* Color tokens */
+  --color-bg: #1a1a1a;
+  --color-surface: #222222;
+  --color-surface-alt: #242424;
+  --color-border: #2e2e2e;
+  --color-border-hover: #3a3a3a;
+  --color-accent: #e8c870;
+  --color-text-primary: #f0ede6;
+  --color-text-secondary: #aaaaaa;
+  --color-text-dim: #777777;
+  --color-text-ghost: #555555;
+
+  /* Typography tokens */
+  --font-heading: "Roboto Mono", monospace;
+  --font-body: "Domine", sans-serif;
+
+  --heading-xl: 5.5rem;
+  --heading-l: 3rem;
+  --heading-m: 1.5rem;
+  --body-text: 1.125rem;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --line-height-body: 1.7;
+  --letter-spacing: 0.12em;
+
+  /* Layout and spacing tokens */
+  --grid-gap: 1rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+
+  /* Shape and border tokens */
+  --radius-border: 1.25rem;
+
+  /* Shadow and transition tokens */
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* GLOBAL STYLES */
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+.header__container ul {
+  list-style-type: none;
+  display: flex;
+  gap: var(--space-md);
+}
+
+/* UTILIYY CLASSES */
+.container {
+  width: calc(100% - 6rem);
+  max-width: 69.375rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  /*   border: 1px solid antiquewhite;
+ */
+}
+
+.img__container {
+  width: min(400px, 100%);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__inner__left {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-md);
+  justify-content: center;
+  align-items: center;
+}
+.underline-text {
+  border-bottom: 2px solid var(--color-accent);
+}
