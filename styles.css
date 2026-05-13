@@ -62,7 +62,7 @@ body {
   color: var(--color-text-primary);
   line-height: 1.6;
   font-size: clamp(1rem, 0.97rem + 0.13vw, 1.125rem);
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
 }
 section {
   scroll-snap-align: start;
@@ -127,7 +127,7 @@ a {
 }
 /* UTILIYY CLASSES */
 .wrapper {
-  width: calc(100% - 6rem);
+  width: calc(100% - 3.75rem);
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.5rem;
