@@ -16,7 +16,7 @@
   --font-body: "Domine", sans-serif;
 
   --heading-xl: 3.5rem;
-  --heading-l: 3rem;
+  --heading-l: 2.5rem;
   --heading-m: 1.5rem;
   --body-text: 1.125rem;
 
@@ -62,8 +62,11 @@ body {
   color: var(--color-text-primary);
   line-height: 1.6;
   font-size: clamp(1rem, 0.97rem + 0.13vw, 1.125rem);
+  scroll-snap-type: y proximity;
 }
-
+section {
+  scroll-snap-align: start;
+}
 img {
   display: block;
   max-width: 100%;
@@ -92,12 +95,13 @@ h3 {
 p {
   font-size: var(--body-text);
 }
+
 /* NAVIGATION */
 a {
   color: var(--color-text-primary);
   text-decoration: none;
   font-family: var(--font-heading);
-  font-size: clamp(0.8rem, 0.75rem + 0.21vw, 1rem);
+  font-size: clamp(0.75rem, 0.75rem + 0.21vw, 1.125rem);
 }
 
 .header__container ul {
@@ -117,6 +121,10 @@ a {
   background-color: var(--color-bg);
 }
 
+/* ABOUT ME */
+#about img {
+  border-radius: 5%;
+}
 /* UTILIYY CLASSES */
 .wrapper {
   width: calc(100% - 6rem);

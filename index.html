@@ -28,22 +28,22 @@
         <nav>
           <ul>
             <li>
-              <a href="hero">
+              <a href="#hero">
                 <i class="fa-regular fa-house"></i> <span>Home</span>
               </a>
             </li>
             <li>
-              <a href="about"
+              <a href="#about"
                 ><i class="fa-regular fa-user"></i><span>About</span></a
               >
             </li>
             <li>
-              <a href="projects"
+              <a href="#projects"
                 ><i class="fa-regular fa-file-code"></i><span>Projects</span></a
               >
             </li>
             <li>
-              <a href="contact"
+              <a href="#contact"
                 ><i class="fa-regular fa-envelope"></i><span>Contact</span></a
               >
             </li>
@@ -79,8 +79,8 @@
       </section>
 
       <!-- about me section  -->
-
       <section id="about" class="wrapper">
+        <h2>About</h2>
         <div class="img__container">
           <img
             src="./assets/images/profile-p.png"
@@ -88,9 +88,118 @@
             width="250"
           />
         </div>
+
+        <!-- Tab links and tab content -->
+        <div class="tabs">
+          <div role="tablist" aria-label="Content section"></div>
+          <button
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-1"
+            id="tab-1"
+          >
+            About Me
+          </button>
+          <button
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-2"
+            id="tab-2"
+          >
+            Skills
+          </button>
+          <button
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-3"
+            id="tab-3"
+          >
+            Education
+          </button>
+
+          <!--tab content -->
+          <div id="panel-1" role="tabpanel" aria-labelledby="tab-1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ipsa
+            accusamus eos illum ratione! Itaque maxime vel cum libero nisi
+            laudantium eveniet quia nam reiciendis corporis? Deleniti hic odit
+            voluptatem?
+          </div>
+          <div id="panel-2" role="tabpanel" aria-labelledby="tab-2" hidden>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+            voluptatum laboriosam in possimus excepturi, magnam nisi officiis
+            corporis consequuntur rerum beatae eaque explicabo eveniet vel
+            doloribus ullam. Nisi, eveniet deleniti.
+          </div>
+          <div id="panel-3" role="tabpanel" aria-labelledby="tab-3" hidden>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione
+            delectus quis, sint, rem deleniti reprehenderit accusantium qui quas
+            mollitia excepturi voluptates totam porro laboriosam quasi illo
+            error quibusdam corporis aspernatur?
+          </div>
+        </div>
       </section>
 
-      <section id="projects" class="wrapper"></section>
+      <!-- Projects section -->
+      <section id="projects" class="wrapper">
+        <h2>Projects</h2>
+        <div class="grid__container">
+          <div class="grid__item">
+            <div class="img__grid">
+              <img src="" alt="" />
+            </div>
+            <h3>Project One</h3>
+            <div class="tech__tags"><p>HTML</p></div>
+            <div class="tech__tags"><p>CSS</p></div>
+          </div>
+
+          <div class="grid__item">
+            <div class="img__grid">
+              <img src="" alt="" />
+            </div>
+            <h3>Project 2</h3>
+            <div class="tech__tags"><p>HTML</p></div>
+            <div class="tech__tags"><p>CSS</p></div>
+          </div>
+
+          <div class="grid__item">
+            <div class="img__grid">
+              <img src="" alt="" />
+            </div>
+            <h3>Project 3</h3>
+            <div class="tech__tags"><p>HTML</p></div>
+            <div class="tech__tags"><p>CSS</p></div>
+          </div>
+
+          <div class="grid__item">
+            <div class="img__grid">
+              <img src="" alt="" />
+            </div>
+            <h3>Project 4</h3>
+            <div class="tech__tags"><p>HTML</p></div>
+            <div class="tech__tags"><p>CSS</p></div>
+          </div>
+
+          <div class="grid__item">
+            <div class="img__grid">
+              <img src="" alt="" />
+            </div>
+            <h3>Project 5</h3>
+            <div class="tech__tags"><p>HTML</p></div>
+            <div class="tech__tags"><p>CSS</p></div>
+          </div>
+
+          <div class="grid__item">
+            <div class="img__grid">
+              <img src="" alt="" />
+            </div>
+            <h3>Project 6</h3>
+            <div class="tech__tags"><p>HTML</p></div>
+            <div class="tech__tags"><p>CSS</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact me section -->
       <section id="contact" class="wrapper"></section>
       <footer class="wrapper"></footer>
     </main>
