@@ -14,27 +14,48 @@
   /* Typography tokens */
   --font-heading: "Roboto Mono", monospace;
   --font-body: "Domine", sans-serif;
-
-  --heading-xl: 3.5rem;
-  --heading-l: 2.5rem;
-  --heading-m: 1.5rem;
-  --body-text: 1.125rem;
-
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-bold: 700;
 
   /* Layout and spacing tokens */
-  --gap: 1rem;
-  --space-sm: 1rem;
-  --space-md: 1.5rem;
-  --space-l: 2rem;
+
+  /* Container Widths */
+  --container-max-width: 63.125rem; /* 1010px */
+  --content-width: 59.125rem; /* 946px */
+
+  /* Font Sizes */
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-base: 1rem; /* 16px */
+  --text-lg: 1.25rem; /* 20px */
+  --text-xl: 1.28125rem; /* 20.5px */
+  --text-2xl: 1.921875rem; /* 30.75px */
+  --text-3xl: 3.203125rem; /* 51.25px */
+
+  /* Padding */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 0.75rem; /* 12px */
+  --spacing-lg: 1rem; /* 16px */
+  --spacing-xl: 1.25rem; /* 20px */
+  --spacing-2xl: 1.5rem; /* 24px */
+  --spacing-3xl: 2rem; /* 32px */
+  --spacing-4xl: 2.0625rem; /* 33px */
+  --spacing-5xl: 3rem; /* 48px */
+  --spacing-6xl: 5rem; /* 80px */
+  --spacing-7xl: 6rem; /* 96px */
+
+  /* Gaps (Flexbox/Grid) */
+  --gap-xs: 0.5rem; /* 8px */
+  --gap-sm: 0.75rem; /* 12px */
+  --gap-md: 1rem; /* 16px */
+  --gap-lg: 1.5rem; /* 24px */
+  --gap-xl: 2rem; /* 32px */
+  --gap-2xl: 3rem; /* 48px */
 
   /* Shape and border tokens */
-  --radius-border: 1.25rem;
-
-  /* Shadow and transition tokens */
-  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.18);
+  --radius-border: 1.25rem; /* 20px */
 }
 
 /* GLOBAL STYLES */
@@ -61,11 +82,13 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text-primary);
   line-height: 1.6;
-  font-size: clamp(1rem, 0.97rem + 0.13vw, 1.125rem);
+  font-size: var(--text-base);
   scroll-snap-type: y mandatory;
 }
 section {
   scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
 }
 img {
   display: block;
@@ -82,18 +105,19 @@ h5 {
 }
 
 h1 {
-  font-size: var(--heading-xl);
+  font-size: var(--text-3xl);
 }
 
 h2 {
-  font-size: var(--heading-l);
+  font-size: var(--text-2xl);
+}
+
+button {
+  font-size: var(--text-base);
 }
 
 h3 {
-  font-size: var(--heading-m);
-}
-p {
-  font-size: var(--body-text);
+  font-size: var(--text-xl);
 }
 
 /* NAVIGATION */
@@ -101,7 +125,7 @@ a {
   color: var(--color-text-primary);
   text-decoration: none;
   font-family: var(--font-heading);
-  font-size: clamp(0.75rem, 0.75rem + 0.21vw, 1.125rem);
+  font-size: var(--text-base);
 }
 
 .header__container ul {
@@ -121,18 +145,34 @@ a {
   background-color: var(--color-bg);
 }
 
+/* HERO SECTION */
+#hero {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: var(--spacing-6xl);
+  gap: var(--spacing-7xl);
+}
+
+.hero__info {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
 /* ABOUT ME */
 #about img {
   border-radius: 5%;
 }
 /* UTILIYY CLASSES */
 .wrapper {
-  width: calc(100% - 3.75rem);
+  width: calc(100% - 4rem);
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  border: 1px solid antiquewhite;
 }
 
 .img__container {
@@ -141,4 +181,18 @@ a {
 
 .underline-text {
   border-bottom: 2px solid var(--color-accent);
+}
+
+/* DECORATIVES IMAGES */
+.deco-arcs,
+.deco-dots,
+.deco-orb {
+  position: absolute;
+  pointer-events: none; /* so they never block clicks */
+  z-index: 0;
+}
+.deco-arcs {
+  top: 0;
+  left: 0;
+  width: 22.5rem;
 }
