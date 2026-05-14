@@ -26,24 +26,24 @@
       <header class="header__container wrapper">
         <img src="./assets/icons/page-icon.svg" alt="Website logo" width="50" />
         <nav>
-          <ul>
+          <ul class="nav__container">
             <li>
-              <a href="#hero">
+              <a href="#hero" class="nav-links">
                 <i class="fa-regular fa-house"></i> <span>Home</span>
               </a>
             </li>
             <li>
-              <a href="#about"
-                ><i class="fa-regular fa-user"></i><span>About</span></a
+              <a href="#about" class="nav-links"
+                ><i class="fa-regular fa-user"></i><span>About Me</span></a
               >
             </li>
             <li>
-              <a href="#projects"
+              <a href="#projects" class="nav-links"
                 ><i class="fa-regular fa-file-code"></i><span>Projects</span></a
               >
             </li>
             <li>
-              <a href="#contact"
+              <a href="#contact" class="nav-links"
                 ><i class="fa-regular fa-envelope"></i><span>Contact</span></a
               >
             </li>
@@ -53,6 +53,7 @@
 
       <!-- banner hero section  -->
       <section id="hero" class="wrapper">
+        <!-- Decoratibe background image -->
         <svg
           class="deco-arcs"
           viewBox="0 0 240 240"
@@ -116,9 +117,11 @@
           </p>
           <p class="muted">// available for opportunities</p>
           <div class="hero__links">
-            <a href="">View Projects</a>
-            <a href=""><img src="./assets/icons/github.svg" alt="" />GitHub</a>
-            <a href="">Contact Me</a>
+            <a href="#projects" class="cta-button">View Projects</a>
+            <a href="#" class="cta-button"
+              ><img src="./assets/icons/github.svg" alt="" />GitHub</a
+            >
+            <a href="#contact" class="cta-button">Contact Me</a>
           </div>
         </div>
 
