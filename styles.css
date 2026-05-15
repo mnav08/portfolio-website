@@ -278,6 +278,7 @@ p.muted {
 .text__container {
   max-width: 40.25rem;
   line-height: 2;
+  color: var(--color-text-secondary);
 }
 
 /* tab links items*/
@@ -296,6 +297,7 @@ p.muted {
   color: var(--color-accent);
 }
 
+/*hide flex container of panels  */
 [role="tabpanel"][hidden] {
   display: none;
 }
@@ -308,6 +310,14 @@ p.muted {
   font-size: var(--spacing-5xl);
 }
 
+.list-header {
+  font-weight: var(--fw-bold);
+  color: var(--color-text-primary);
+}
+
+.list-header::marker {
+  color: var(--color-accent);
+}
 /* DECORATIVES IMAGES */
 .deco-arcs,
 .deco-dots,
