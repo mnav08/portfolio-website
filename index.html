@@ -24,7 +24,13 @@
     <main>
       <!-- header and navlinks -->
       <header class="header__container wrapper">
-        <img src="./assets/icons/page-icon.svg" alt="Website logo" width="50" />
+        <a href="#hero"
+          ><img
+            src="./assets/icons/page-icon.svg"
+            alt="Website logo"
+            width="50"
+          />
+        </a>
         <nav>
           <ul class="nav__container">
             <li>
@@ -117,8 +123,11 @@
           </p>
           <p class="muted">// available for opportunities</p>
           <div class="hero__links">
-            <a href="#projects" class="cta-button">View Projects</a>
-            <a href="#" class="cta-button"
+            <a href="#projects" class="cta-button cta-accent">View Projects</a>
+            <a
+              href="https://github.com/mnav08"
+              target="_blank"
+              class="cta-button"
               ><img src="./assets/icons/github.svg" alt="" />GitHub</a
             >
             <a href="#contact" class="cta-button">Contact Me</a>
@@ -138,60 +147,83 @@
       <!-- about me section  -->
       <section id="about" class="wrapper">
         <h2>About</h2>
-        <div class="img__container">
-          <img
-            src="./assets/images/profile-p.png"
-            alt="Working on laptop at the library"
-            width="250"
-          />
-        </div>
 
-        <!-- Tab links and tab content -->
-        <div class="tabs">
-          <div role="tablist" aria-label="Content section"></div>
-          <button
-            role="tab"
-            aria-selected="true"
-            aria-controls="panel-1"
-            id="tab-1"
-          >
-            About Me
-          </button>
-          <button
-            role="tab"
-            aria-selected="false"
-            aria-controls="panel-2"
-            id="tab-2"
-          >
-            Skills
-          </button>
-          <button
-            role="tab"
-            aria-selected="true"
-            aria-controls="panel-3"
-            id="tab-3"
-          >
-            Education
-          </button>
+        <div class="about-flex">
+          <div class="img__container">
+            <img
+              src="./assets/images/profile-p.png"
+              alt="Working on laptop at the library"
+              width="400"
+            />
+          </div>
 
-          <!--tab content -->
-          <div id="panel-1" role="tabpanel" aria-labelledby="tab-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ipsa
-            accusamus eos illum ratione! Itaque maxime vel cum libero nisi
-            laudantium eveniet quia nam reiciendis corporis? Deleniti hic odit
-            voluptatem?
-          </div>
-          <div id="panel-2" role="tabpanel" aria-labelledby="tab-2" hidden>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
-            voluptatum laboriosam in possimus excepturi, magnam nisi officiis
-            corporis consequuntur rerum beatae eaque explicabo eveniet vel
-            doloribus ullam. Nisi, eveniet deleniti.
-          </div>
-          <div id="panel-3" role="tabpanel" aria-labelledby="tab-3" hidden>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione
-            delectus quis, sint, rem deleniti reprehenderit accusantium qui quas
-            mollitia excepturi voluptates totam porro laboriosam quasi illo
-            error quibusdam corporis aspernatur?
+          <!-- Tab links and tab content -->
+          <div class="tabs">
+            <div role="tablist" aria-label="Content section">
+              <button
+                role="tab"
+                aria-selected="true"
+                aria-controls="panel-1"
+                id="tab-1"
+              >
+                About Me
+              </button>
+              <button
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-2"
+                id="tab-2"
+              >
+                Skills
+              </button>
+              <button
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-3"
+                id="tab-3"
+              >
+                Education
+              </button>
+            </div>
+
+            <div class="tab-panels">
+              <!--tab content -->
+              <div
+                id="panel-1"
+                role="tabpanel"
+                aria-labelledby="tab-1"
+                class="text__container"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+                ipsa accusamus eos illum ratione! Itaque maxime vel cum libero
+                nisi laudantium eveniet quia nam reiciendis corporis? Deleniti
+                hic odit voluptatem?
+              </div>
+              <div
+                id="panel-2"
+                role="tabpanel"
+                aria-labelledby="tab-2"
+                hidden
+                class="text__container"
+              >
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+                voluptatum laboriosam in possimus excepturi, magnam nisi
+                officiis corporis consequuntur rerum beatae eaque explicabo
+                eveniet vel doloribus ullam. Nisi, eveniet deleniti.
+              </div>
+              <div
+                id="panel-3"
+                role="tabpanel"
+                aria-labelledby="tab-3"
+                hidden
+                class="text__container"
+              >
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Ratione delectus quis, sint, rem deleniti reprehenderit
+                accusantium qui quas mollitia excepturi voluptates totam porro
+                laboriosam quasi illo error quibusdam corporis aspernatur?
+              </div>
+            </div>
           </div>
         </div>
       </section>

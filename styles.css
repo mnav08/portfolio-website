@@ -93,11 +93,11 @@ section {
   scroll-snap-align: start;
   position: relative;
   overflow: hidden;
+  margin-bottom: var(--spacing-7xl);
 }
 img {
   display: block;
   max-width: 100%;
-  border-radius: 50%;
 }
 
 h1,
@@ -114,6 +114,7 @@ h1 {
 
 h2 {
   font-size: var(--text-2xl);
+  font-weight: var(--fw-medium);
 }
 
 button {
@@ -122,6 +123,7 @@ button {
 
 h3 {
   font-size: var(--text-xl);
+  font-weight: var(--fw-medium);
 }
 
 /* NAVIGATION */
@@ -135,6 +137,10 @@ h3 {
   top: 0;
   z-index: 100;
   background-color: var(--color-bg);
+}
+
+.header__container img {
+  border-radius: 50%;
 }
 
 .nav__container {
@@ -172,7 +178,6 @@ a {
   gap: var(--spacing-7xl);
   background-color: var(--color-surface);
   border-radius: var(--radius-border);
-  margin-bottom: var(--spacing-7xl);
   padding: var(--spacing-xl);
 }
 
@@ -219,14 +224,24 @@ p.muted {
   border: 1px solid var(--color-text-primary);
 }
 
-.cta-button:first-child {
-  color: var(--color-bg);
-  background-color: var(--color-accent);
-}
 /* ABOUT ME */
-#about img {
+#about {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-border);
+  padding: var(--spacing-xl);
+}
+.about-flex {
+  margin-top: var(--spacing-lg);
+  margin-bottom: 1rem;
+  display: flex;
+  gap: var(--spacing-2xl);
+}
+
+#about img,
+#hero img {
   border-radius: 5%;
 }
+
 /* UTILIYY CLASSES */
 .wrapper {
   width: calc(100% - 4rem);
@@ -237,11 +252,52 @@ p.muted {
 }
 
 .img__container {
-  width: min(300px, 100%);
+  width: min(500px, 100%);
 }
 
 .underline-text {
   border-bottom: 2px solid var(--color-accent);
+}
+
+.cta-accent {
+  color: var(--color-bg);
+  background-color: var(--color-accent);
+}
+
+/* TABS STYLES */
+
+/* tab links container */
+[role="tablist"] {
+  display: flex;
+  gap: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.text__container {
+  max-width: 40.25rem;
+}
+
+/* tab links items*/
+[role="tab"] {
+  margin-bottom: var(--spacing-sm);
+  cursor: pointer;
+  background: var(--color-bg);
+  border: none;
+  color: var(--color-text-primary);
+  margin-right: var(--spacing-lg);
+}
+
+/* styles when tablink is active */
+[role="tab"][aria-selected="true"] {
+  text-decoration: underline;
+  color: var(--color-accent);
+}
+
+/* tab content container */
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
 }
 
 /* DECORATIVES IMAGES */
