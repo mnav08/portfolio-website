@@ -6,7 +6,7 @@ const panels = document.querySelectorAll('[role="tabpanel"]');
 
 // the switch panels function
 const activateTab = (selectedTab) => {
-  //this variable reads what panel is beign controlled
+  //reads aria-control panel ID e.i "panel-1"
   const targetPanelId = selectedTab.getAttribute("aria-controls");
 
   // reset tabs
@@ -21,7 +21,6 @@ const activateTab = (selectedTab) => {
 
   // activate selected
   selectedTab.setAttribute("aria-selected", "true");
-
   document.getElementById(targetPanelId).hidden = false;
 };
 

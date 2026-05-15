@@ -19,12 +19,6 @@
   --fw-medium: 500;
   --fw-bold: 700;
 
-  /* Layout and spacing tokens */
-
-  /* Container Widths */
-  --container-max-width: 63.125rem; /* 1010px */
-  --content-width: 59.125rem; /* 946px */
-
   /* Font Sizes */
   --text-xs: 0.75rem; /* 12px */
   --text-sm: 0.875rem; /* 14px */
@@ -146,7 +140,7 @@ h3 {
 .nav__container {
   display: flex;
   list-style-type: none;
-  gap: var(--spacing-3xl);
+  gap: var(--gap-xl);
 }
 
 a {
@@ -169,6 +163,7 @@ a {
 .nav-links:active {
   color: var(--color-accent);
 }
+
 /* HERO SECTION */
 #hero {
   z-index: 1;
@@ -186,7 +181,7 @@ a {
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  gap: var(--spacing-2xl);
+  gap: var(--gap-lg);
 }
 
 p.muted {
@@ -203,7 +198,7 @@ p.muted {
 
 .hero__links {
   display: flex;
-  gap: var(--spacing-3xl);
+  gap: var(--gap-xl);
 }
 
 .cta-button {
@@ -234,7 +229,7 @@ p.muted {
   margin-top: var(--spacing-lg);
   margin-bottom: 1rem;
   display: flex;
-  gap: var(--spacing-2xl);
+  gap: var(--gap-xl);
 }
 
 #about img,
@@ -266,15 +261,23 @@ p.muted {
 
 /* TABS STYLES */
 
+/*container */
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+
 /* tab links container */
 [role="tablist"] {
   display: flex;
-  gap: var(--spacing-lg);
+  gap: var(--gap-md);
   border-bottom: 1px solid var(--color-border);
 }
 
 .text__container {
   max-width: 40.25rem;
+  line-height: 2;
 }
 
 /* tab links items*/
@@ -293,11 +296,16 @@ p.muted {
   color: var(--color-accent);
 }
 
-/* tab content container */
-.tabs {
+[role="tabpanel"][hidden] {
+  display: none;
+}
+
+/* skills icons */
+.skills {
   display: flex;
-  flex-direction: column;
-  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+  gap: var(--gap-md);
+  font-size: var(--spacing-5xl);
 }
 
 /* DECORATIVES IMAGES */
