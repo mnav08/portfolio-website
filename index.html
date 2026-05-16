@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <!-- Icons script -->
     <script
       src="https://kit.fontawesome.com/9d44a78030.js"
@@ -58,7 +58,7 @@
       </header>
 
       <!-- banner hero section  -->
-      <section id="hero" class="wrapper">
+      <section id="hero" class="wrapper surface-card">
         <!-- Decoratibe background image -->
         <svg
           class="deco-arcs"
@@ -140,20 +140,21 @@
             src="./assets/images/headshot.png"
             alt="Profile picture headhsot"
             width="300"
+            class="img-radius"
           />
         </div>
       </section>
 
       <!-- about me section  -->
-      <section id="about" class="wrapper">
+      <section id="about" class="wrapper surface-card card-border">
         <h2>About</h2>
-
         <div class="about-flex">
           <div class="img__container">
             <img
               src="./assets/images/profile-p.png"
               alt="Working on laptop at the library"
               width="400"
+              class="img-radius"
             />
           </div>
 
@@ -256,16 +257,29 @@
       </section>
 
       <!-- Projects section -->
-      <section id="projects" class="wrapper">
+      <section id="projects" class="wrapper surface-card card-border">
         <h2>Projects</h2>
         <div class="grid__container">
-          <div class="grid__item">
+          <!--  -->
+          <div class="grid__item card-border">
             <div class="img__grid">
-              <img src="" alt="" />
+              <img src="./assets/images/run-club.png" alt="" width="300" />
             </div>
-            <h3>Project One</h3>
-            <div class="tech__tags"><p>HTML</p></div>
-            <div class="tech__tags"><p>CSS</p></div>
+            <h3>Run The City</h3>
+            <p class="description">
+              Interactive landing page for a fictional running community.
+            </p>
+            <div class="tags">
+              <div class="tag-item"><p>HTML</p></div>
+              <div class="tag-item"><p>CSS</p></div>
+              <div class="tag-item">
+                <p>JavaScript</p>
+              </div>
+            </div>
+            <div class="overlay">
+              <a class="cta-button" href="#">Live Demo</a>
+              <a class="cta-button" href="#">GitHub</a>
+            </div>
           </div>
 
           <div class="grid__item">
@@ -273,8 +287,13 @@
               <img src="" alt="" />
             </div>
             <h3>Project 2</h3>
-            <div class="tech__tags"><p>HTML</p></div>
-            <div class="tech__tags"><p>CSS</p></div>
+            <div class="tags">
+              <div class="tag-item"><p>HTML</p></div>
+              <div class="tag-item"><p>CSS</p></div>
+              <div class="tag-item">
+                <p>JavaScript</p>
+              </div>
+            </div>
           </div>
 
           <div class="grid__item">
@@ -282,8 +301,11 @@
               <img src="" alt="" />
             </div>
             <h3>Project 3</h3>
-            <div class="tech__tags"><p>HTML</p></div>
-            <div class="tech__tags"><p>CSS</p></div>
+            <div class="tags">
+              <div class="tag-item"><p>HTML</p></div>
+              <div class="tag-item"><p>CSS</p></div>
+              <div class="tag-item"><p>JavaScript</p></div>
+            </div>
           </div>
 
           <div class="grid__item">
@@ -291,26 +313,11 @@
               <img src="" alt="" />
             </div>
             <h3>Project 4</h3>
-            <div class="tech__tags"><p>HTML</p></div>
-            <div class="tech__tags"><p>CSS</p></div>
-          </div>
-
-          <div class="grid__item">
-            <div class="img__grid">
-              <img src="" alt="" />
+            <div class="tags">
+              <div class="tag-item"><p>HTML</p></div>
+              <div class="tag-item"><p>CSS</p></div>
+              <div class="tag-item"><p>JavaScript</p></div>
             </div>
-            <h3>Project 5</h3>
-            <div class="tech__tags"><p>HTML</p></div>
-            <div class="tech__tags"><p>CSS</p></div>
-          </div>
-
-          <div class="grid__item">
-            <div class="img__grid">
-              <img src="" alt="" />
-            </div>
-            <h3>Project 6</h3>
-            <div class="tech__tags"><p>HTML</p></div>
-            <div class="tech__tags"><p>CSS</p></div>
           </div>
         </div>
       </section>
