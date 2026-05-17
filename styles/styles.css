@@ -94,7 +94,7 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  padding: var(--spacing-sm) var(--spacing-md);
+  padding: var(--spacing-xs) var(--spacing-md);
   font-size: var(--text-sm);
   transition: var(--transition-buttons);
 }
@@ -104,6 +104,10 @@
   transform: translateY(-4px);
   box-shadow: var(--box-shadow);
   border: 1px solid var(--color-text-primary);
+}
+
+.decription {
+  font-size: var(--text-sm);
 }
 
 .surface-card {
@@ -126,6 +130,23 @@
 
 .img__container {
   width: min(500px, 100%);
+}
+
+.icon-img {
+  max-width: 50%;
+}
+
+.flex-btn {
+  display: flex;
+  align-items: center;
+}
+
+.min-w {
+  min-width: 6.25rem;
+}
+
+.max-w {
+  min-width: 8rem;
 }
 
 /* GLOBAL STYLES */
@@ -354,10 +375,11 @@ p.muted {
 
 .tag-item {
   font-size: var(--text-xs);
-}
-
-.decription {
-  font-size: var(--text-sm);
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+  padding: 0 var(--spacing-md);
+  font-family: var(--font-heading);
+  border-radius: var(--radius-border);
 }
 
 /* OVERLAY STYLES */
@@ -379,6 +401,9 @@ p.muted {
   pointer-events: auto;
 }
 
+.grid__item:hover {
+  border-color: var(--color-border-hover);
+}
 /* DECORATIVES IMAGES */
 .deco-arcs,
 .deco-orb {
