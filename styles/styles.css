@@ -11,7 +11,7 @@
   --color-text-dim: #777777;
   --color-text-ghost: #555555;
   --overlay-bg: rgba(0, 0, 0, 0.6);
-  --box-shadow: 0 5px 10px rgba(197, 202, 212, 0.12);
+  --box-shadow: 0 5px 10px rgba(197, 202, 212, 0.24);
 
   /* Typography tokens */
   --font-heading: "Roboto Mono", monospace;
@@ -122,6 +122,11 @@
 
 .img-radius {
   border-radius: 5%;
+}
+
+.circle-frame {
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
 }
 
 .img__grid {
@@ -404,6 +409,12 @@ p.muted {
 .grid__item:hover {
   border-color: var(--color-border-hover);
 }
+
+/* CONTACT ME */
+#contact {
+  background-color: var(--color-surface);
+}
+
 /* DECORATIVES IMAGES */
 .deco-arcs,
 .deco-orb {
@@ -417,7 +428,8 @@ p.muted {
   width: 22.5rem;
 }
 
-.deco-dots {
-  top: 40px;
-  right: 0px;
+.deco-orb {
+  bottom: 0;
+  right: 0;
+  width: 22.5rem;
 }
