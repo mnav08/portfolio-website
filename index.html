@@ -353,7 +353,7 @@
       </section>
 
       <!-- contact me section -->
-      <section id="contact" class="wrapper surface-card bg-card">
+      <section id="contact" class="wrapper surface-card">
         <img src="./assets/images/cornerOrbit.svg" class="deco-orb" alt="" />
         <div class="flex-col">
           <div class="flex-center">
@@ -366,18 +366,20 @@
 
           <!-- contact form -->
           <div class="flex-row contact">
-            <form action="">
+            <form action="POST" name="contact-form">
               <label for="name">Name</label>
+              <br />
               <input
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Moises Navas"
+                placeholder="Your name"
                 required
                 aria-required="true"
               />
               <br />
               <label for="email">Email</label>
+              <br />
               <input
                 type="email"
                 id="email"
@@ -388,23 +390,39 @@
               />
               <br />
               <label for="extra">Your Message</label>
-              <textarea id="extra" name="extra" rows="3" cols="40"></textarea>
               <br />
-              <button type="submit">Send Message</button>
+              <textarea
+                id="extra"
+                name="extra"
+                rows="3"
+                cols="40"
+                placeholder="Your message..."
+              ></textarea>
+              <br />
+              <button type="submit" class="cta-accent">Send Message</button>
+              <span id="toast-msg"></span>
             </form>
 
-            <div class="socials">
-              <div class="social-link">
+            <div class="socials flex-col">
+              <div class="social-link flex-btn card-border">
                 <img src="./assets/icons/github.svg" alt="" />
-                <p><a href="">Github</a></p>
+                <p>
+                  <a href="https://github.com/mnav08" target="_blank">Github</a>
+                </p>
               </div>
-              <div class="social-link">
+              <div class="social-link flex-btn card-border">
                 <img src="./assets/icons/icon.svg" alt="" />
                 <p><a href="mailto:navas.20moi@gmail.com">Email</a></p>
               </div>
-              <div class="social-link">
+              <div class="social-link flex-btn card-border">
                 <img src="./assets/icons/linkedin.svg" alt="" />
-                <p><a href="">LinkedIn</a></p>
+                <p>
+                  <a
+                    href="https://www.linkedin.com/in/moises-navas-430469386/"
+                    target="_blank"
+                    >LinkedIn</a
+                  >
+                </p>
               </div>
             </div>
           </div>
@@ -412,7 +430,9 @@
       </section>
 
       <!--  -->
-      <footer class="wrapper"></footer>
+      <footer class="flex-center">
+        <p class="footer-text">&COPY; 2026 Moises Navas.</p>
+      </footer>
     </main>
 
     <!-- website script -->

@@ -50,3 +50,23 @@ tabs.forEach((tab) => {
     }
   });
 });
+
+// contact form email message
+const formMessage = document.getElementById("toast-msg");
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbwgvQPFEk-sJLbo9aNw-RYhsEHwR3zB6yOp4cdy2Eg28pGrh5Lm9EnWndv0L117rtdu/exec";
+const form = document.forms["contact-form"];
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => response.json())
+    .then((response) => {
+      ((formMessage.innerText = "Your message has been sent ✅"),
+        setTimeout(() => {
+          formMessage.innerText = "";
+        }, 5000));
+      form.reset();
+    })
+    .catch((error) => console.error("Error!", error.message));
+});

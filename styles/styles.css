@@ -6,6 +6,7 @@
   --color-border: #2e2e2e;
   --color-border-hover: #3a3a3a;
   --color-accent: #e8c870;
+  --semi-trasnparent-accent: #36332a;
   --color-text-primary: #f0ede6;
   --color-text-secondary: #aaaaaa;
   --color-text-dim: #777777;
@@ -148,6 +149,7 @@
 .flex-btn {
   display: flex;
   align-items: center;
+  gap: var(--gap-xs);
 }
 
 .flex-center {
@@ -205,6 +207,13 @@ img {
   height: auto;
 }
 
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
 h1,
 h2,
 h3,
@@ -229,6 +238,12 @@ button {
 h3 {
   font-size: var(--text-xl);
   font-weight: var(--fw-medium);
+}
+
+#toast-msg {
+  margin: var(--spacing-md);
+  display: block;
+  font-size: var(--text-sm);
 }
 
 /* NAVIGATION */
@@ -433,8 +448,69 @@ p.muted {
 }
 
 /* CONTACT ME */
-.contact {
+#contact {
+  background-color: var(--color-surface-alt);
 }
+.social-link img {
+  padding: var(--spacing-sm);
+  background-color: var(--semi-trasnparent-accent);
+  border-radius: var(--spacing-sm);
+}
+
+.social-link {
+  padding: var(--spacing-sm);
+  background-color: var(--color-surface);
+  font-size: var(--text-sm);
+}
+
+.social-link:hover {
+  border: 1px solid var(--color-text-primary);
+  cursor: pointer;
+}
+
+/* contact form */
+input,
+textarea {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  border-radius: var(--radius-border);
+  border: 1px solid var(--color-border-hover);
+  padding: var(--spacing-sm);
+  font-size: var(--text-sm);
+}
+
+textarea {
+  max-width: 14.6875rem;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 1px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+button[type="submit"] {
+  padding: var(--spacing-xs) var(--spacing-lg);
+  font-size: var(--text-sm);
+  border-radius: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  transition: all 0.2s ease-in;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus-visible {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow);
+}
+
+/* footer */
+footer {
+  border-top: 1px solid var(--color-border);
+  padding: var(--spacing-3xl);
+  font-family: var(--font-heading);
+}
+
 /* DECORATIVES IMAGES */
 .deco-arcs,
 .deco-orb {
@@ -452,4 +528,5 @@ p.muted {
   bottom: 0;
   right: 0;
   width: 22.5rem;
+  opacity: 0.8;
 }
