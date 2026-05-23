@@ -22,13 +22,13 @@
   --fw-bold: 700;
 
   /* Font Sizes */
-  --text-xs: 0.75rem; /* 12px */
-  --text-sm: 0.875rem; /* 14px */
-  --text-base: 1rem; /* 16px */
-  --text-lg: 1.25rem; /* 20px */
-  --text-xl: 1.28125rem; /* 20.5px */
-  --text-2xl: 1.921875rem; /* 30.75px */
-  --text-3xl: 3.203125rem; /* 51.25px */
+  --text-xs: clamp(0.55rem, 1.2vw, 0.75rem);
+  --text-sm: clamp(0.7rem, 1.4vw, 0.875rem);
+  --text-base: clamp(0.85rem, 1.5vw, 1rem);
+  --text-lg: clamp(1rem, 2vw, 1.25rem);
+  --text-xl: clamp(1rem, 2vw, 1.28125rem);
+  --text-2xl: clamp(1.2rem, 2.5vw, 1.921875rem);
+  --text-3xl: clamp(1.5rem, 4vw, 3.203125rem);
 
   /* Padding */
   --spacing-xs: 0.25rem; /* 4px */
@@ -258,6 +258,7 @@ h3 {
   top: 0;
   z-index: 100;
   background-color: var(--color-bg);
+  padding: var(--spacing-xs) var(--spacing-lg);
 }
 
 .header__container img {
@@ -268,6 +269,7 @@ h3 {
   display: flex;
   list-style-type: none;
   gap: var(--gap-xl);
+  position: relative;
 }
 
 a {
@@ -289,6 +291,24 @@ a {
 
 .nav-links:active {
   color: var(--color-accent);
+}
+
+.skip-nav-link {
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  position: absolute;
+  left: 1rem;
+  top: 0.5rem;
+  transform: translateX(-120%);
+  transition: transform 200ms ease;
+  z-index: 9999;
+  background-color: var(--color-surface-alt);
+}
+
+.skip-nav-link:focus,
+.skip-nav-link:focus-visible {
+  transform: translateX(10%);
+  outline: 3px solid var(--color-accent);
 }
 
 /* HERO SECTION */
