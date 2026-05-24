@@ -51,6 +51,9 @@ tabs.forEach((tab) => {
   });
 });
 
+//
+//
+//
 // contact form email message
 const formMessage = document.getElementById("toast-msg");
 const scriptURL =
@@ -69,4 +72,36 @@ form.addEventListener("submit", (e) => {
       form.reset();
     })
     .catch((error) => console.error("Error!", error.message));
+});
+
+//
+//
+//
+// toggle menu
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.querySelector(".menu-toggle");
+  const nav = document.getElementById("main-nav");
+  // if btn or nav is falsy stop running the function
+  if (!btn || !nav) return;
+
+  // function to close menu after link is clicked
+  function closeMenu() {
+    btn.classList.remove("open");
+    nav.classList.remove("open");
+    btn.setAttribute("aria-expanded", "false");
+  }
+  // flip the CSS class that shows the menu
+  btn.onclick = () => {
+    btn.classList.toggle("open");
+    nav.classList.toggle("open");
+
+    // tell assistive tech whether the menu is open
+    const isOpen = btn.classList.contains("open");
+    btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  };
+
+  const navLinks = document.querySelectorAll(".nav-links");
+  navLinks.forEach((link) => {
+    link.onclick = closeMenu;
+  });
 });

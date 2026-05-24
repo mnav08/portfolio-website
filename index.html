@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
     <!-- Icons script -->
     <script
       src="https://kit.fontawesome.com/9d44a78030.js"
@@ -32,8 +33,17 @@
           />
         </a>
         <a href="#hero" class="skip-nav-link">Skip to main content</a>
-
-        <nav>
+        <button
+          class="menu-toggle"
+          aria-controls="main-nav"
+          aria-expanded="false"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <nav id="main-nav">
           <ul class="nav__container">
             <li>
               <a href="#hero" class="nav-links">
@@ -431,7 +441,7 @@
         </div>
       </section>
 
-      <!--  -->
+      <!--footer  -->
       <footer class="flex-center">
         <p class="footer-text">&COPY; 2026 Moises Navas.</p>
       </footer>

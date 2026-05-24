@@ -56,6 +56,11 @@
 
   /* transition/animation */
   --transition-buttons: all 200ms ease;
+
+  /* hamburger menu */
+  --bar-width: 60px;
+  --bar-height: 8px;
+  --hamburger-gap: 6px;
 }
 
 /* Box sizing reset */
@@ -177,6 +182,18 @@
 
 .max-w {
   min-width: 8rem;
+}
+
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* GLOBAL STYLES */
@@ -309,6 +326,39 @@ a {
 .skip-nav-link:focus-visible {
   transform: translateX(10%);
   outline: 3px solid var(--color-accent);
+}
+
+/* hamburger menu */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: currentColor;
+  cursor: pointer;
+  padding: var(--spacing-sm);
+}
+
+.menu-toggle:focus-visible {
+  outline: 1px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+/* hamburger bars */
+.menu-toggle .bar {
+  display: block;
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: currentColor;
+  border-radius: 999px;
+  margin-bottom: var(--hamburger-gap);
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.menu-toggle .bar:last-of-type {
+  margin-bottom: 0;
 }
 
 /* HERO SECTION */
