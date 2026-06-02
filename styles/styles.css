@@ -11,7 +11,7 @@
   --color-text-secondary: #aaaaaa;
   --color-text-dim: #777777;
   --color-text-ghost: #555555;
-  --overlay-bg: rgba(0, 0, 0, 0.6);
+  --overlay-bg: rgba(0, 0, 0, 0.8);
   --box-shadow: 0 5px 10px rgba(197, 202, 212, 0.24);
 
   /* Typography tokens */
@@ -58,8 +58,8 @@
   --transition-buttons: all 200ms ease;
 
   /* hamburger menu */
-  --bar-width: 60px;
-  --bar-height: 8px;
+  --bar-width: 40px;
+  --bar-height: 6px;
   --hamburger-gap: 6px;
 }
 
@@ -219,7 +219,9 @@ section {
   margin-bottom: var(--spacing-7xl);
 }
 
-img {
+img,
+picture,
+iframe {
   display: block;
   max-width: 100%;
   height: auto;
@@ -238,6 +240,21 @@ h3,
 h4,
 h5 {
   font-family: var(--font-heading);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 h1 {
@@ -508,6 +525,7 @@ p.muted {
   pointer-events: none;
 }
 
+/* hover the card, show the overlay inside it */
 .grid__item:hover .overlay,
 .grid__item:focus-within .overlay {
   opacity: 1;

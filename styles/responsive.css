@@ -48,6 +48,7 @@
     gap: var(--hamburger-gap);
   }
 
+  /* X icon animation */
   .menu-toggle .bar {
     margin-bottom: 0;
     transform-origin: center;
@@ -65,5 +66,33 @@
   .menu-toggle.open .bar:nth-of-type(3) {
     transform: translateY(calc(-1 * (var(--bar-height) + var(--hamburger-gap))))
       rotate(-45deg);
+  }
+
+  /* hero section */
+  #hero {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+    justify-items: center;
+    text-align: center;
+  }
+
+  #hero .img__container {
+    order: -1;
+    justify-self: center;
+    width: min(250px, 100%);
+    z-index: 1;
+  }
+
+  .hero__info,
+  .hero__links {
+    width: 100%;
+  }
+
+  .hero__links {
+    justify-content: center;
+  }
+
+  .hero__info .muted {
+    align-self: center;
   }
 }
