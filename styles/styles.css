@@ -313,7 +313,7 @@ a {
 }
 
 .nav-links {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-size: var(--text-base);
 }
 

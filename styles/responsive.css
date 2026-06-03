@@ -95,4 +95,37 @@
   .hero__info .muted {
     align-self: center;
   }
+
+  /* section spacing */
+  section {
+    margin-bottom: var(--spacing-4xl);
+  }
+}
+
+@media (max-width: 530px) {
+  #hero {
+    margin-top: var(--spacing-2xl);
+    gap: var(--gap-md);
+  }
+  .surface-card {
+    padding: var(--spacing-md);
+  }
+
+  #hero .img__container {
+    width: min(200px, 100%);
+  }
+
+  #hero .hero__info {
+    gap: var(--gap-md);
+    padding-inline: var(--spacing-md);
+    text-align: center;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .hero__links {
+    flex-direction: column;
+    gap: var(--gap-md);
+    align-items: center;
+  }
 }
