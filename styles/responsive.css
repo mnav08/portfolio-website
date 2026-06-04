@@ -100,6 +100,16 @@
   section {
     margin-bottom: var(--spacing-4xl);
   }
+
+  /* about me section */
+  .about-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-flex .img__container {
+    width: min(300px, 100%);
+    margin-inline: auto;
+  }
 }
 
 @media (max-width: 530px) {
@@ -127,5 +137,20 @@
     flex-direction: column;
     gap: var(--gap-md);
     align-items: center;
+  }
+
+  #contact .social-link p {
+    display: none;
+  }
+}
+
+/* mobile devices */
+@media (max-width: 480px) {
+  .contact {
+    flex-direction: column;
+  }
+  .socials {
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
