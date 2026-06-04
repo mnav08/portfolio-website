@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
     <!-- Icons script -->
     <script
       src="https://kit.fontawesome.com/9d44a78030.js"
@@ -23,7 +24,7 @@
   <body>
     <main>
       <!-- header and navlinks -->
-      <header class="header__container wrapper">
+      <header class="header__container">
         <a href="#hero"
           ><img
             src="./assets/icons/page-icon.svg"
@@ -31,7 +32,18 @@
             width="50"
           />
         </a>
-        <nav>
+        <a href="#hero" class="skip-nav-link">Skip to main content</a>
+        <button
+          class="menu-toggle"
+          aria-controls="main-nav"
+          aria-expanded="false"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <nav id="main-nav">
           <ul class="nav__container">
             <li>
               <a href="#hero" class="nav-links">
@@ -106,7 +118,7 @@
       </section>
 
       <!-- about me section  -->
-      <section id="about" class="wrapper surface-card card-border">
+      <section id="about" class="wrapper surface-card">
         <h2>About</h2>
         <div class="about-flex">
           <div class="img__container">
@@ -217,7 +229,7 @@
       </section>
 
       <!-- Projects section -->
-      <section id="projects" class="wrapper surface-card card-border">
+      <section id="projects" class="wrapper surface-card">
         <h2>Projects</h2>
         <div class="grid__container">
           <!--  -->
@@ -404,32 +416,44 @@
             </form>
 
             <div class="socials flex-col">
-              <div class="social-link flex-btn card-border">
-                <img src="./assets/icons/github.svg" alt="" />
-                <p>
-                  <a href="https://github.com/mnav08" target="_blank">Github</a>
-                </p>
+              <div class="social-link card-border">
+                <a
+                  href="https://github.com/mnav08"
+                  target="_blank"
+                  class="flex-btn"
+                >
+                  <img src="./assets/icons/github.svg" alt="" />
+                  <p>Github</p>
+                </a>
               </div>
-              <div class="social-link flex-btn card-border">
-                <img src="./assets/icons/icon.svg" alt="" />
-                <p><a href="mailto:navas.20moi@gmail.com">Email</a></p>
+
+              <div class="social-link card-border">
+                <a
+                  href="mailto:navas.20moi@gmail.com"
+                  target="_blank"
+                  class="flex-btn"
+                >
+                  <img src="./assets/icons/icon.svg" alt="" />
+                  <p>Email</p>
+                </a>
               </div>
-              <div class="social-link flex-btn card-border">
-                <img src="./assets/icons/linkedin.svg" alt="" />
-                <p>
-                  <a
-                    href="https://www.linkedin.com/in/moises-navas-430469386/"
-                    target="_blank"
-                    >LinkedIn</a
-                  >
-                </p>
+
+              <div class="social-link card-border">
+                <a
+                  href="https://www.linkedin.com/in/moises-navas-430469386/"
+                  target="_blank"
+                  class="flex-btn"
+                >
+                  <img src="./assets/icons/linkedin.svg" alt="" />
+                  <p>LinkedIn</p>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!--  -->
+      <!--footer  -->
       <footer class="flex-center">
         <p class="footer-text">&COPY; 2026 Moises Navas.</p>
       </footer>
