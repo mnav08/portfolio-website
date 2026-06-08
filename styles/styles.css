@@ -176,11 +176,11 @@
   justify-content: space-around;
 }
 
-.min-w {
+.min-w-s {
   min-width: 6.25rem;
 }
 
-.max-w {
+.min-w-l {
   min-width: 8rem;
 }
 
