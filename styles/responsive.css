@@ -245,7 +245,7 @@ section {
   }
 
   .hero__links {
-    justify-content: flex-start;
+    justify-content: center;
     gap: var(--gap-xl);
     flex-direction: row;
   }
@@ -276,9 +276,8 @@ section {
 
   /* social links layout adjustments */
   .socials {
-    gap: var(--gap-md);
+    gap: var(--gap-2xl);
     align-items: flex-start;
-    flex-direction: row;
     justify-content: space-around;
   }
 
