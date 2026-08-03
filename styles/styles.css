@@ -302,7 +302,7 @@ h3 {
 .nav__container {
   display: flex;
   list-style-type: none;
-  gap: var(--gap-xl);
+  gap: var(--gap-2xl);
   position: relative;
 }
 
@@ -320,21 +320,6 @@ a {
 .nav-links:hover,
 .nav-links:focus-visible {
   color: var(--color-accent);
-}
-
-/* navigation links bottom border animation when hover */
-.nav-links::after {
-  content: "";
-  width: 0;
-  height: 3px;
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  transition: 0.5s;
-  background: var(--color-accent);
-}
-.nav-links:hover::after {
-  width: 17%;
 }
 
 .skip-nav-link {
