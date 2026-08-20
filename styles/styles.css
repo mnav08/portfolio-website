@@ -85,10 +85,6 @@
   padding-right: 0.5rem;
 }
 
-.underline-text {
-  border-bottom: 2px solid var(--color-accent);
-}
-
 .cta-accent {
   color: var(--color-bg);
   background-color: var(--color-accent);
@@ -315,6 +311,7 @@ a {
 .nav-links {
   font-family: var(--font-body);
   font-size: var(--text-base);
+  font-weight: 600;
 }
 
 .nav-links:hover,
