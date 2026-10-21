@@ -377,6 +377,7 @@ a {
   grid-template-columns: 2fr 1fr;
   margin-top: var(--spacing-6xl);
   gap: var(--spacing-7xl);
+  border: 2px solid var(--color-accent);
 }
 
 .hero__info {
